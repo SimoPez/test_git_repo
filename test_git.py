@@ -70,8 +70,6 @@ def update_and_run(cnt):
         process.terminate()
         process = subprocess.Popen([sys.executable, './test_git/main.py', '-cnt', '1'])
 
-    return process
-
 if __name__ == '__main__':
     
     print('Run automation')
