@@ -14,17 +14,19 @@ def update_script():
 
     os.makedirs("./test_git_old")
     for f in os.listdir('./test_git_repo/test_git'):
-        with open(f'./test_git_repo/test_git/{f}', 'r') as py_f:
-            f_to_copy = py_f.read()
-        with open(f'./test_git_old/{f}', 'w') as f_to_paste:
-            f_to_paste.write(f_to_copy)
+        if '.py' in f:
+            with open(f'./test_git_repo/test_git/{f}', 'r') as py_f:
+                f_to_copy = py_f.read()
+            with open(f'./test_git_old/{f}', 'w') as f_to_paste:
+                f_to_paste.write(f_to_copy)
 
     os.makedirs("./test_git_old/test_git_utils")
     for f in os.listdir('./test_git_repo/test_git/test_git_utils'):
-        with open(f'./test_git_repo/test_git/test_git_utils/{f}', 'r') as py_f:
-            f_to_copy = py_f.read()
-        with open(f'./test_git_old/test_git_utils/{f}', 'w') as f_to_paste:
-            f_to_paste.write(f_to_copy)
+        if '.py' in f:
+            with open(f'./test_git_repo/test_git/test_git_utils/{f}', 'r') as py_f:
+                f_to_copy = py_f.read()
+            with open(f'./test_git_old/test_git_utils/{f}', 'w') as f_to_paste:
+                f_to_paste.write(f_to_copy)
 
     shutil.rmtree('./automation_scripts')
     shutil.copytree('./test_git_repo/test_git', './test_git')
@@ -35,7 +37,7 @@ def update_script():
     
 def update_and_run(cnt):
 
-    git.Git('./test_git_repo').clone('https://github.com/secpat-dev/clockify_notion_automation.git')
+    git.Git('./test_git_repo').clone('https://github.com/SimoPez/test_git_repo.git')
     files = {}
     for f in os.listdir('./test_git_repo/test_git'):
         if '.py' in f:
