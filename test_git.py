@@ -5,7 +5,7 @@ import git
 import subprocess
 import sys
 
-global process
+process = 0
 
 def update_script():
 
@@ -35,6 +35,8 @@ def update_script():
 
     
 def update_and_run(cnt):
+
+    global process
 
     if 'test_git_repo' in os.listdir('.'):
         shutil.rmtree('./test_git_repo')
