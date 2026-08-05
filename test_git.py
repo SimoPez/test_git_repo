@@ -31,9 +31,6 @@ def update_script():
     shutil.rmtree('./test_git')
     shutil.copytree('./test_git_repo/test_git', './test_git')
 
-    shutil.rmtree('./test_git_repo')
-
-
     
 def update_and_run(cnt):
 
