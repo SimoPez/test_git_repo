@@ -1,2 +1,2 @@
 def verso():
-    return 'MEOW'
+    return 'BAU'
