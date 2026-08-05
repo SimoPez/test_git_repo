@@ -28,7 +28,7 @@ def update_script():
             with open(f'./test_git_old/test_git_utils/{f}', 'w') as f_to_paste:
                 f_to_paste.write(f_to_copy)
 
-    shutil.rmtree('./automation_scripts')
+    shutil.rmtree('./test_git')
     shutil.copytree('./test_git_repo/test_git', './test_git')
 
     shutil.rmtree('./test_git_repo')
@@ -36,6 +36,9 @@ def update_script():
 
     
 def update_and_run(cnt):
+
+    if 'test_git_repo' in os.listdir('.'):
+        shutil.rmtree('./test_git_repo')
 
     git.Git('./test_git_repo').clone('https://github.com/SimoPez/test_git_repo.git')
     files = {}
