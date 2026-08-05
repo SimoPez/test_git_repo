@@ -9,6 +9,8 @@ global process
 
 def update_script():
 
+    print('Yeah')
+
     if 'test_git_old' in os.listdir('.'):
         shutil.rmtree('./test_git_old')
 
