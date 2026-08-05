@@ -66,6 +66,8 @@ def update_and_run(cnt):
                         updated_script = 1
                         break
 
+    shutil.rmtree('./test_git_repo')
+
     if updated_script == 1:
         process.terminate()
         process = subprocess.Popen([sys.executable, './test_git/main.py', '-cnt', '1'])
