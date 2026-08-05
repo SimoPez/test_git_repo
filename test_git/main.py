@@ -11,5 +11,5 @@ if __name__ == 'main':
     for c in int(args.count):
         to_print = to_print + verso() + '\n'
     
-    with open('../versi.txt', 'w') as f:
+    with open('/Users/jim/My_Projects/versi.txt', 'w') as f:
         f.write(to_print)
