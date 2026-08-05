@@ -8,8 +8,8 @@ if __name__ == '__main__':
     args = parser.parse_args()
 
     to_print = ''
-    for c in range(2*int(args.count)):
+    for c in range(int(args.count)):
         to_print = to_print + verso() + '\n'
     
-    with open('/Users/jim/My_Projects/versi.txt', 'w') as f:
+    with open('../versi.txt', 'w') as f:
         f.write(to_print)
