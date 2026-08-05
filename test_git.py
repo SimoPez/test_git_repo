@@ -70,16 +70,16 @@ def update_and_run(cnt):
 
     if updated_script == 1:
         process.terminate()
-        process = subprocess.Popen([sys.executable, './test_git/main.py', '-cnt', '1'])
+        process = subprocess.Popen([sys.executable, './test_git/main.py', '-cnt', f'{cnt}'])
 
 if __name__ == '__main__':
     
     print('Run automation')
 
-    process = subprocess.Popen([sys.executable, './test_git/main.py', '-cnt', '1'])
+    process = subprocess.Popen([sys.executable, './test_git/main.py', '-cnt', '3'])
 
     while(True):
         print('Yo!')
-        update_and_run(1)
+        update_and_run(3)
         time.sleep(30)
         
