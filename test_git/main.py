@@ -1,4 +1,5 @@
 import argparse
+import time
 from test_git_utils.verso import verso
 
 if __name__ == '__main__':
@@ -11,5 +12,6 @@ if __name__ == '__main__':
     for c in range(2*int(args.count)):
         to_print = to_print + verso() + '\n'
     
-    with open('../versi.txt', 'w') as f:
-        f.write(to_print)
+    while True:
+        print(verso())
+        time.sleep(12)
