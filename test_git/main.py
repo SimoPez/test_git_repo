@@ -4,6 +4,8 @@ from test_git_utils.verso import verso
 
 if __name__ == '__main__':
 
+    print('Hellooo')
+
     parser = argparse.ArgumentParser()
     parser.add_argument("-cnt", "--count")
     args = parser.parse_args()
